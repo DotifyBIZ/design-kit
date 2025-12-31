@@ -76,7 +76,4 @@
 }
 
 /* Slight hover darken without changing base variable colors */
-.dt-btn--primary:hover { /* keep tactile hover above */ }
-.dt-btn--secondary:hover { /* tactile hover defined below */ }
-.dt-btn--secondary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(16,24,40,0.12); }
 .dt-btn--outline:hover { background: rgba(0,0,0,0.03); }

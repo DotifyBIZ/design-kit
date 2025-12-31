@@ -15,8 +15,7 @@
   margin-bottom: var(--space-3);
 }
 
-/* Map native heading elements to dt- prefixed styles for easy use in WP/Elementor */
-h1 { all: unset; display: block; font-family: var(--font-sans); }
+h1, h2, h3, h4, h5, h6 { all: unset; display: block; font-family: var(--font-sans); }
 h1 { font-size: var(--text-3xl); line-height: var(--line-tight); font-weight: var(--font-semibold); margin-bottom: var(--space-3); }
 h2 { font-size: var(--text-2xl); line-height: var(--line-tight); font-weight: var(--font-semibold); margin-bottom: var(--space-3); }
 h3 { font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-3); }
