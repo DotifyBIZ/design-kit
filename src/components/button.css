@@ -18,7 +18,7 @@
 
 .dt-btn--primary {
   background: var(--dt-red);
-  color: #fff;
+  color: var(--dt-white);
 }
 
 .dt-btn--primary:hover {
