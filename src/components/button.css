@@ -27,7 +27,11 @@
 
 .dt-btn--secondary {
   background: var(--dt-indigo);
-  color: #fff;
+  color: var(--dt-white);
+}
+
+.dt-btn--secondary:hover {
+  opacity: 0.9;
 }
 
 .dt-btn--outline {
