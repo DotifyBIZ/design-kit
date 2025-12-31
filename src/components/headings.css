@@ -1,0 +1,12 @@
+.dt-h1 { font-size: var(--text-3xl); line-height: var(--line-tight); }
+.dt-h2 { font-size: var(--text-2xl); line-height: var(--line-tight); }
+.dt-h3 { font-size: var(--text-xl); }
+.dt-h4 { font-size: var(--text-lg); }
+
+.dt-h1,
+.dt-h2,
+.dt-h3,
+.dt-h4 {
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-3);
+}
