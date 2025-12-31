@@ -4,7 +4,7 @@
 .dt-text-muted { color: #666; }
 .dt-text-primary { color: var(--dt-red); }
 .dt-text-secondary { color: var(--dt-indigo); }
-.dt-text-grey { color: var(--dt-text); }
+.dt-text-grey { color: var(--dt-grey-300); }
 .dt-text-bold { font-weight: var(--font-semibold); }
 
 /* Size utilities */
@@ -16,3 +16,4 @@
 /* Font utilities */
 .dt-font-semibold { font-weight: var(--font-semibold); }
 .dt-font-italic { font-style: italic; }
+
