@@ -1,6 +1,6 @@
 # Dotify Design Kit
 
-A versioned, brand-consistent CSS design system for Dotify websites, tools, and WordPress (Elementor).
+A versioned, brand-consistent CSS design system for Dotify sites, tools, and WordPress (Elementor).
 
 ## Purpose
 The Dotify Design System provides a single source of truth for brand colors, typography, layout primitives, and UI components.
