@@ -1,4 +1,4 @@
 .dt-text-center { text-align: center; }
-.dt-text-muted { color: #666; }
+.dt-text-muted { color: var(--dt-gray-600); }
 .dt-text-primary { color: var(--dt-red); }
 .dt-text-bold { font-weight: var(--font-semibold); }
