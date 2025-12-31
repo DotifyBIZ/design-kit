@@ -18,8 +18,21 @@
   cursor: pointer;
   text-decoration: none;
 }
-.btn:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.btn:focus-visible { outline: 2px solid rgba(16,24,40,0.06); outline-offset: 3px; }
 .btn:disabled, .btn.disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+
+/* Ensure disabled buttons don't show a focus outline */
+.btn:disabled:focus-visible, .btn.disabled:focus-visible { outline: none; }
+/* Make Bootstrap .btn disabled match dt-btn disabled visual */
+.btn:disabled, .btn.disabled {
+  background: var(--dt-grey-100);
+  color: #9b9b9b;
+  border-color: var(--dt-grey-300);
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 1;
+}
 .btn:active { transform: translateY(1px); }
 
 .btn-primary { background: var(--dt-red); color: var(--dt-white); }

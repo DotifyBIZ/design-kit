@@ -11,11 +11,19 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
+  transition: transform 140ms ease, box-shadow 180ms ease, filter 120ms ease, opacity 120ms ease;
 }
 
 .dt-btn:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  /* Subtle focus ring to reduce visual weight */
+  outline: 2px solid rgba(16,24,40,0.06);
+  outline-offset: 3px;
+}
+
+/* No outline when element is disabled */
+.dt-btn:disabled:focus-visible,
+.dt-btn[disabled]:focus-visible {
+  outline: none;
 }
 
 .dt-btn--primary {
@@ -24,7 +32,9 @@
 }
 
 .dt-btn--primary:hover {
-  opacity: 0.9;
+  /* tactile hover: lift and subtle shadow (no color change) */
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(16,24,40,0.12);
 }
 
 .dt-btn--secondary {
@@ -49,9 +59,15 @@
 /* Disabled state */
 .dt-btn:disabled,
 .dt-btn[disabled] {
-  opacity: 0.5;
+  /* visually disabled: uniform light grey background and slightly darker text */
+  opacity: 1;
   cursor: not-allowed;
   pointer-events: none;
+  background: var(--dt-grey-100);
+  color: #9b9b9b;
+  border: 1px solid var(--dt-grey-300);
+  box-shadow: none;
+  transform: none;
 }
 
 /* Active state */
@@ -60,6 +76,7 @@
 }
 
 /* Slight hover darken without changing base variable colors */
-.dt-btn--primary:hover { filter: brightness(0.97); }
-.dt-btn--secondary:hover { filter: brightness(0.97); }
+.dt-btn--primary:hover { /* keep tactile hover above */ }
+.dt-btn--secondary:hover { /* tactile hover defined below */ }
+.dt-btn--secondary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(16,24,40,0.12); }
 .dt-btn--outline:hover { background: rgba(0,0,0,0.03); }
