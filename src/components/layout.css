@@ -1,0 +1,17 @@
+.dt-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.dt-section {
+  padding: var(--space-7) 0;
+}
+
+.dt-section--light {
+  background: var(--dt-white);
+}
+
+.dt-section--grey {
+  background: var(--dt-grey-50);
+}
