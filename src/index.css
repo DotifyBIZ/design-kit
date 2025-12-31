@@ -8,5 +8,6 @@
 @import url("./components/typography.css");
 @import url("./components/card.css");
 @import url("./utilities/colors.css");
+@import url("./compat/bootstrap-compat.css");
 @import url("./components/layout.css");
 @import url("./utilities/text.css");

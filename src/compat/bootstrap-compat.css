@@ -1,0 +1,152 @@
+/* Bootstrap compatibility layer (maps common Bootstrap classes to dt- tokens/styles)
+   Purpose: load this AFTER Bootstrap/iTop CSS to restyle Bootstrap components
+   Note: preserves brand colors and radius; conservative overrides only.
+*/
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-base);
+  font-family: var(--font-sans);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-sm);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.btn:disabled, .btn.disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+.btn:active { transform: translateY(1px); }
+
+.btn-primary { background: var(--dt-red); color: var(--dt-white); }
+.btn-primary:hover { filter: brightness(0.97); }
+
+.btn-secondary { background: var(--dt-indigo); color: var(--dt-white); }
+.btn-secondary:hover { filter: brightness(0.97); }
+
+.btn-outline-primary { background: transparent; border: 2px solid var(--dt-red); color: var(--dt-red); }
+.btn-outline-secondary { background: transparent; border: 2px solid var(--dt-indigo); color: var(--dt-indigo); }
+
+.btn-lg { padding: calc(var(--space-3) + 4px) var(--space-5); font-size: var(--text-lg); }
+.btn-sm { padding: var(--space-2) var(--space-3); font-size: var(--text-sm); }
+.btn-block { display:flex; width:100%; }
+
+/* Cards */
+.card { background: var(--dt-white); border-radius: var(--radius-base); box-shadow: 0 6px 18px rgba(16,24,40,0.06); border: 1px solid var(--dt-grey-300); }
+.card-body { padding: var(--space-4); }
+.card-title { font-weight: var(--font-semibold); margin-bottom: var(--space-2); }
+
+/* Alerts */
+.alert { padding: var(--space-3) var(--space-4); border-radius: calc(var(--radius-base) / 2); border: 1px solid transparent; }
+.alert-success { background: rgba(21,140,54,0.06); color: var(--dt-plus); border-color: rgba(21,140,54,0.12); }
+.alert-danger { background: rgba(217,26,29,0.06); color: var(--dt-minus); border-color: rgba(217,26,29,0.12); }
+.alert-warning { background: rgba(237,216,61,0.06); color: var(--dt-attention); border-color: rgba(237,216,61,0.12); }
+.alert-info { background: rgba(31,98,142,0.04); color: var(--dt-blue); border-color: rgba(31,98,142,0.08); }
+
+/* Badges */
+.badge { display: inline-block; padding: 0.25em 0.5em; border-radius: calc(var(--radius-base) / 2); font-size: 0.75rem; }
+.badge-primary { background: var(--dt-red); color: var(--dt-white); }
+.badge-secondary { background: var(--dt-indigo); color: var(--dt-white); }
+
+/* Forms */
+.form-control { display: block; width: 100%; padding: 0.5rem 0.75rem; font-size: var(--text-md); line-height: var(--line-normal); color: var(--color-text); background-color: var(--dt-white); background-clip: padding-box; border: 1px solid var(--dt-grey-300); border-radius: calc(var(--radius-base) / 2); }
+.form-control:focus { outline: none; box-shadow: 0 0 0 3px rgba(31,98,142,0.06); border-color: var(--dt-blue); }
+.form-control[disabled], .form-control:disabled { background-color: var(--dt-grey-50); }
+
+.form-check { display:flex; align-items:center; gap: var(--space-2); }
+.form-check-input { width: 1.25em; height: 1.25em; border-radius: 3px; border: 1px solid var(--dt-grey-300); }
+.form-check-input:checked { background: var(--dt-red); border-color: var(--dt-red); }
+.form-check-label { margin: 0; }
+
+.input-group { display:flex; align-items:stretch; width:100%; }
+.input-group .form-control { border-radius: 0; }
+
+/* Navbar / Nav */
+.navbar { padding: var(--space-3) var(--space-4); background: var(--dt-white); border-bottom: 1px solid var(--dt-grey-100); }
+.navbar-brand { font-weight: var(--font-semibold); }
+.nav-link { color: var(--color-text); text-decoration: none; padding: 0 var(--space-2); }
+.nav-link:hover { color: var(--color-primary); }
+
+/* Dropdowns */
+.dropdown-menu { min-width: 10rem; background: var(--dt-white); border: 1px solid var(--dt-grey-300); border-radius: calc(var(--radius-base) / 2); padding: var(--space-2) 0; }
+.dropdown-item { display:block; padding: var(--space-2) var(--space-4); color: var(--color-text); text-decoration:none; }
+.dropdown-item:hover { background: var(--dt-grey-50); }
+
+/* Modal basics */
+.modal { display: none; position: fixed; inset: 0; z-index: 1050; }
+.modal.show { display: block; }
+.modal-dialog { margin: 1.75rem auto; max-width: 800px; }
+.modal-content { background: var(--dt-white); border-radius: var(--radius-base); border: 1px solid var(--dt-grey-300); box-shadow: 0 12px 28px rgba(16,24,40,0.08); }
+.modal-header, .modal-body, .modal-footer { padding: var(--space-4); }
+
+/* Tables */
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: var(--space-3); border: 1px solid var(--dt-grey-100); }
+.table thead th { background: var(--dt-grey-50); font-weight: var(--font-semibold); }
+
+/* Utilities mapping helpers (lightweight) */
+.text-muted { color: #666; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.d-flex { display: flex; }
+.d-block { display: block; }
+.d-inline-block { display: inline-block; }
+
+/* Keep overrides conservative; more mappings can be added on demand. */
+
+/* Bootstrap 3 specific mappings (panels, labels, validation, pagination, input-group addons) */
+
+/* Panels (Bootstrap 3) -> map to cards */
+.panel { background: var(--dt-white); border-radius: var(--radius-base); box-shadow: none; border: 1px solid var(--dt-grey-300); margin-bottom: var(--space-4); }
+.panel-body { padding: var(--space-4); }
+.panel-heading { padding: var(--space-3) var(--space-4); font-weight: var(--font-semibold); background: transparent; border-bottom: 1px solid var(--dt-grey-100); }
+.panel-default { border-color: var(--dt-grey-300); }
+.panel-title { margin: 0; font-weight: var(--font-semibold); }
+
+/* Labels (Bootstrap 3 uses .label) */
+.label { display:inline-block; padding: 0.2em 0.5em; border-radius: 0.25rem; font-size: 0.75rem; }
+.label-default { background: var(--dt-grey-100); color: var(--color-text); }
+.label-primary { background: var(--dt-red); color: var(--dt-white); }
+.label-success { background: var(--dt-plus); color: var(--dt-white); }
+.label-danger { background: var(--dt-minus); color: var(--dt-white); }
+.label-warning { background: var(--dt-attention); color: #111; }
+
+/* Form validation utility classes (BS3: .has-error/.has-warning/.has-success applied to .form-group) */
+.has-error .form-control { border-color: rgba(217,26,29,0.8); box-shadow: none; }
+.has-warning .form-control { border-color: rgba(237,216,61,0.9); box-shadow: none; }
+.has-success .form-control { border-color: rgba(21,140,54,0.9); box-shadow: none; }
+.help-block { display:block; margin-top: calc(var(--space-1)); margin-bottom: 0; color: #666; font-size: 0.875rem; }
+
+/* Input group addon (BS3 uses .input-group-addon) */
+.input-group-addon { padding: 0.5rem 0.75rem; background: var(--dt-grey-100); border: 1px solid var(--dt-grey-300); color: var(--color-text); }
+.input-group .form-control:first-child { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.input-group .form-control:last-child { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+
+/* Dropdown menus in BS3 are <ul><li><a> */
+.dropdown-menu { min-width: 10rem; background: var(--dt-white); border: 1px solid var(--dt-grey-300); border-radius: calc(var(--radius-base) / 2); padding: var(--space-2) 0; }
+.dropdown-menu > li > a { display:block; padding: var(--space-2) var(--space-4); color: var(--color-text); text-decoration:none; }
+.dropdown-menu > li > a:hover { background: var(--dt-grey-50); }
+
+/* Pagination (BS3) */
+.pagination { display:flex; list-style:none; padding-left:0; }
+.pagination > li { margin: 0 var(--space-1); }
+.pagination > li > a, .pagination > li > span { display:block; padding: 0.5rem 0.75rem; border: 1px solid var(--dt-grey-100); border-radius: 4px; }
+.pagination > .active > a { background: var(--dt-red); color: var(--dt-white); border-color: var(--dt-red); }
+
+/* Navs (tabs/pills) */
+.nav-tabs { border-bottom: 1px solid var(--dt-grey-100); }
+.nav-tabs > li > a { margin-right: 0; border-radius: 4px 4px 0 0; }
+.nav-pills > li > a { border-radius: 4px; }
+
+/* Glyphicons spacing helper (iTop uses glyphicons in places) */
+.glyphicon { display:inline-block; line-height:1; margin-right: 0.35rem; }
+
+/* Tooltip/popover basics (visuals only) */
+.tooltip { background: rgba(0,0,0,0.75); color: #fff; padding: 0.35rem 0.5rem; border-radius: 4px; font-size: 0.75rem; }
+.popover { background: var(--dt-white); border: 1px solid var(--dt-grey-300); border-radius: 6px; box-shadow: 0 8px 24px rgba(16,24,40,0.08); }
+
