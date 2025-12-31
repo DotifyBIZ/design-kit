@@ -12,15 +12,3 @@ Thumbs.db
 
 # Logs
 npm-debug.log*
-
-# Dependencies
-node_modules/
-
-# Build outputs (adjust based on your build process)
-dist/
-build/
-
-# Lock files (include based on your package manager)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml

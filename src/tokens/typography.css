@@ -1,9 +1,19 @@
-:root {
-  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+/* ==========================================================================
+   Typography Tokens – Dotify Design System
 
+   Montserrat is loaded automatically via Google Fonts.
+   Included weights:
+   - 400 (Regular)
+   - 600 (SemiBold)
+   ========================================================================== */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --font-sans: "Montserrat", system-ui, -apple-system, sans-serif;
   --font-regular: 400;
   --font-semibold: 600;
-
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-md: 1rem;
@@ -11,7 +21,6 @@
   --text-xl: 1.375rem;
   --text-2xl: 1.75rem;
   --text-3xl: 2.25rem;
-
   --line-normal: 1.5;
   --line-tight: 1.2;
 }

@@ -3,14 +3,11 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-base);
-
   font-family: var(--font-sans);
   font-weight: var(--font-semibold);
   font-size: var(--text-sm);
-
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -18,7 +15,7 @@
 
 .dt-btn--primary {
   background: var(--dt-red);
-  color: var(--dt-white);
+  color: #fff;
 }
 
 .dt-btn--primary:hover {
@@ -27,11 +24,7 @@
 
 .dt-btn--secondary {
   background: var(--dt-indigo);
-  color: var(--dt-white);
-}
-
-.dt-btn--secondary:hover {
-  opacity: 0.9;
+  color: #fff;
 }
 
 .dt-btn--outline {
