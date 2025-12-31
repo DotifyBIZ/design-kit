@@ -7,7 +7,7 @@
 
 .dt-text-primary { color: var(--color-primary); }
 .dt-text-secondary { color: var(--dt-indigo); }
-.dt-text-grey { color: var(--dt-text); }
+.dt-text-grey { color: var(--dt-grey-300); }
 .dt-text-attention { color: var(--dt-attention); }
 
 .dt-border-primary { border-color: var(--color-primary); }
