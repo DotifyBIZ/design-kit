@@ -15,9 +15,10 @@
 }
 
 .dt-btn:focus-visible {
-  /* Subtle focus ring to reduce visual weight */
-  outline: 2px solid rgba(16,24,40,0.06);
-  outline-offset: 3px;
+  /* Stronger, accessible focus ring using primary tint */
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(31,98,142,0.18);
+  border-radius: calc(var(--radius-base));
 }
 
 /* No outline when element is disabled */
@@ -40,6 +41,12 @@
 .dt-btn--secondary {
   background: var(--dt-indigo);
   color: var(--dt-white);
+}
+
+.dt-btn--secondary:hover {
+  /* match primary tactile hover */
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(16,24,40,0.12);
 }
 
 .dt-btn--outline {

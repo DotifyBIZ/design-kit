@@ -37,6 +37,10 @@ select.dt-form-control {
 .dt-form-error { color: rgba(217,26,29,0.9); font-size: 0.875rem; margin-top: calc(var(--space-1)); }
 .dt-form-success { color: rgba(21,140,54,0.9); font-size: 0.875rem; margin-top: calc(var(--space-1)); }
 
+/* Hide error messages by default; shown when the group has .dt-has-error */
+.dt-form-error { display: none; }
+.dt-has-error .dt-form-error { display: block; }
+
 /* Textarea sizing */
 textarea.dt-form-control { min-height: 120px; resize: vertical; }
 

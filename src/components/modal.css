@@ -1,0 +1,6 @@
+/* Modal (minimal, self-contained) */
+.modal { display: none; position: fixed; inset: 0; z-index: 1050; align-items: center; justify-content: center; }
+.modal.show { display: flex; }
+.modal-dialog { margin: 1.75rem; max-width: 800px; width: 100%; }
+.modal-content { background: var(--dt-white); border-radius: var(--radius-base); border: 1px solid var(--dt-grey-300); box-shadow: 0 12px 28px rgba(16,24,40,0.08); }
+.modal-header, .modal-body, .modal-footer { padding: var(--space-4); }

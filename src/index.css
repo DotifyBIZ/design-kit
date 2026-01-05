@@ -7,8 +7,10 @@
 @import url("./components/headings.css");
 @import url("./components/typography.css");
 @import url("./components/forms.css");
-@import url("./components/card.css");
 @import url("./utilities/colors.css");
-@import url("./compat/bootstrap-compat.css");
+@import url("./utilities/utilities.css");
 @import url("./components/layout.css");
+@import url("./components/modal.css");
+@import url("./components/pagination.css");
 @import url("./utilities/text.css");
+@import url("./components/card.css");
