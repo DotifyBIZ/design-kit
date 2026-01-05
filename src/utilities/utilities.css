@@ -73,7 +73,7 @@
 
 /* Rounded corners */
 .rounded { border-radius: var(--radius-base) !important; }
-.rounded-lg { border-radius: var(--radius-base) !important; }
+.rounded-lg { border-radius: calc(var(--radius-base) * 1.5) !important; }
 .rounded-full { border-radius: var(--radii-full) !important; }
 
 /* Responsive spacing helpers (medium and large breakpoints)
