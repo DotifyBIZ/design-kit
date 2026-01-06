@@ -42,7 +42,7 @@ Elementy wyłączone / ograniczenia
 
 Kontakt w sprawie dostępności
 
-Jeśli chcesz zgłosić problemy z dostępnością lub potrzebujesz pomocy przy adaptacji komponentów, wyślij proszę zgłoszenie (issue) w repozytorium lub napisz na adres business.support@dotify.biz.
+Jeśli chcesz zgłosić problemy z dostępnością lub potrzebujesz pomocy przy adaptacji komponentów, wyślij proszę zgłoszenie (issue) w repozytorium lub napisz na adres [business.support@dotify.biz](mailto:business.support@dotify.biz).
 
 
 Sporządzono przez: Zespół Dotify Design Kit

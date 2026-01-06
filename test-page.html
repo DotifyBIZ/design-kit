@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="src/index.css">
   <style>
     body{padding:28px;background:#f4f6f8;font-family:var(--font-sans);}
-    .skip-link:focus { position: absolute; left: 16px; top: 16px; background: var(--dt-white); padding: 8px 12px; border: 1px solid var(--dt-grey-300); z-index: 2000; color: var(--color-text); }
+    /* Hide skip-link visually but keep in DOM; show on focus */
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+    .skip-link:focus { position: absolute; left: 16px; top: 16px; background: var(--dt-white); padding: 8px 12px; border: 1px solid var(--dt-grey-300); z-index: 2000; color: var(--color-text); width: auto; height: auto; overflow: visible; }
   </style>
 </head>
 <body>
-  <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <main class="dt-container">
     <h1 id="main-content">Dotify Design Kit — Visual Test</h1>
     <p class="dt-lead">This page demonstrates the kit's core styles: headings, typography, buttons, cards, forms, utilities and Bootstrap-compat mappings.</p>
@@ -265,7 +267,7 @@
       function trapFocus(e){
         if(!modal.classList.contains('show')) return;
         if(dialog.contains(e.target)) return; // inside dialog ok
-        e.stopPropagation();
+        // Do not stop propagation: allowing other handlers to run is safer
         var focusable = getFocusable(dialog);
         if(focusable.length) focusable[0].focus(); else dialog.focus();
       }

@@ -34,11 +34,10 @@ select.dt-form-control {
 .dt-has-warning .dt-form-control { border-color: rgba(237,216,61,0.9); }
 .dt-has-success .dt-form-control { border-color: rgba(21,140,54,0.9); }
 
-.dt-form-error { color: rgba(217,26,29,0.9); font-size: 0.875rem; margin-top: calc(var(--space-1)); }
+.dt-form-error { color: rgba(217,26,29,0.9); font-size: 0.875rem; margin-top: calc(var(--space-1)); display: none; }
 .dt-form-success { color: rgba(21,140,54,0.9); font-size: 0.875rem; margin-top: calc(var(--space-1)); }
 
 /* Hide error messages by default; shown when the group has .dt-has-error */
-.dt-form-error { display: none; }
 .dt-has-error .dt-form-error { display: block; }
 
 /* Textarea sizing */

@@ -32,7 +32,10 @@
   box-sizing: border-box;
 }
 
-/* Common fraction sizes (applied from medium breakpoint upwards) */
+/* Common fraction sizes (applied from medium breakpoint upwards)
+  Note: uses a hardcoded 768px breakpoint because CSS custom properties
+  cannot be used inside `@media` queries. This corresponds to --breakpoint-md.
+*/
 @media (min-width: 768px) {
   .dt-col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
   .dt-col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
