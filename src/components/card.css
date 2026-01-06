@@ -19,7 +19,4 @@
 .dt-alert--success { background: #ecfdf5; color: #065f46; border-color: rgba(16,185,129,0.12); }
 .dt-alert--danger { background: #fff1f2; color: #991b1b; border-color: rgba(239,68,68,0.12); }
 
-/* Badges */
-.dt-badge { display: inline-block; padding: 0.15rem 0.5rem; font-size: 0.75rem; border-radius: var(--radius-pill); background: var(--dt-grey-100); color: var(--dt-text); }
-.dt-badge--primary { background: var(--dt-indigo); color: #fff; }
-.dt-badge--accent { background: var(--dt-red); color: #fff; }
+/* Badges moved to components/badges.css */
