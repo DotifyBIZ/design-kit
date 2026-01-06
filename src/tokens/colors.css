@@ -22,4 +22,5 @@
   --color-text: var(--dt-text);
   --color-bg: var(--dt-white);
   --color-section: var(--dt-grey-50);
+  --focus-ring-color: rgba(31,98,142,0.18);
 }

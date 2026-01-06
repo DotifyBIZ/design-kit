@@ -73,11 +73,13 @@
 
 /* Rounded corners */
 .rounded { border-radius: var(--radius-base) !important; }
-.rounded-lg { border-radius: calc(var(--radius-base) * 1.5) !important; }
+.rounded-lg { border-radius: var(--radius-lg) !important; }
 .rounded-full { border-radius: var(--radii-full) !important; }
 
 /* Responsive spacing helpers (medium and large breakpoints)
-   Usage: add `.md-m-2` to apply margin at >= md breakpoint, `.lg-p-3` for padding at >= lg.
+  Usage: add `.md-m-2` to apply margin at >= md breakpoint, `.lg-p-3` for padding at >= lg.
+  Note: media queries use hardcoded px values because CSS custom properties
+  cannot be used in `@media` rules. 768px corresponds to --breakpoint-md.
 */
 @media (min-width: 768px) {
   .md-m-1 { margin: var(--space-1) !important; }
@@ -96,6 +98,7 @@
   .md-p-4 { padding: var(--space-4) !important; }
 }
 
+/* 992px corresponds to --breakpoint-lg */
 @media (min-width: 992px) {
   .lg-m-1 { margin: var(--space-1) !important; }
   .lg-m-2 { margin: var(--space-2) !important; }

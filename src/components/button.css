@@ -17,8 +17,8 @@
 .dt-btn:focus-visible {
   /* Stronger, accessible focus ring using primary tint */
   outline: none;
-  box-shadow: 0 0 0 4px rgba(31,98,142,0.18);
-  border-radius: calc(var(--radius-base));
+  box-shadow: 0 0 0 4px var(--focus-ring-color);
+  border-radius: var(--radius-base);
 }
 
 /* No outline when element is disabled */
