@@ -1,9 +1,6 @@
 /* Utilities: spacing, display, flex, alignment, visibility, rounded */
 
-:root {
-  /* shorthand mapping to existing tokens */
-  --radii-full: 50px;
-}
+/* Utilities rely on tokens defined in src/tokens/*. Do not redefine :root here. */
 
 /* Spacing utilities (margins) */
 .m-0 {
@@ -187,8 +184,7 @@
   border: 0 !important;
 }
 
-/* Rounded corners */
-.rounded { border-radius: var(--radius-base) !important; }
+.rounded { border-radius: var(--radius) !important; }
 .rounded-lg { border-radius: var(--radius-lg) !important; }
 .rounded-full { border-radius: var(--radii-full) !important; }
 

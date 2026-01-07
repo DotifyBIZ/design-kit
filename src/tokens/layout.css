@@ -1,8 +1,9 @@
 :root {
-  --radius-base: 15px;
+  --radius: 15px;
   --radius-sm: 8px;
   --radius-lg: 24px;
   --radius-pill: 9999px;
+  --radii-full: 50px;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;

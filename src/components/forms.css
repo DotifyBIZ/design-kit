@@ -15,7 +15,7 @@ select.dt-form-control {
   color: var(--color-text);
   background-color: var(--dt-white);
   border: 1px solid var(--dt-grey-300);
-  border-radius: calc(var(--radius-base) / 2);
+  border-radius: calc(var(--radius) / 2);
   transition: box-shadow 120ms ease, border-color 120ms ease, transform 60ms ease;
 }
 
