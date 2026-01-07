@@ -16,13 +16,9 @@
   background: var(--dt-grey-50);
 }
 
-/* WordPress: header and branding exceptions */
-.site-header { background: var(--dt-white); }
-.site-header, .site-header * { background: var(--dt-white); }
-
-/* Keep site-branding visual consistent: Montserrat and do not override color/size */
-.site-branding { font-family: 'Montserrat', var(--font-sans); }
-.site-branding a { color: inherit !important; text-decoration: none !important; font-size: inherit !important; }
+/* WordPress: do not override header or branding styles.
+  Global typography and layout rules intentionally exclude
+  header/branding areas so WordPress themes can control them. */
 
 /* Responsive row/column helpers (mobile-first)
    - `.dt-row` creates a horizontal flex container with gaps

@@ -1,7 +1,7 @@
 /* Simple card component */
 .dt-card {
   background: var(--dt-white);
-  border-radius: var(--radius-base);
+  border-radius: var(--radius);
   box-shadow: 0 6px 18px rgba(16,24,40,0.06);
   padding: var(--space-4);
   border: 1px solid var(--dt-grey-300);
