@@ -17,6 +17,13 @@ blockquote {
 }
 
 /* Links */
+/* Exclude WordPress site-branding from global typography/link rules.
+  - Keep site-branding using Montserrat and do not override color/size/link styles.
+*/
+.site-branding { font-family: 'Montserrat', var(--font-sans); }
+.site-branding a { color: inherit !important; text-decoration: none !important; font-size: inherit !important; }
+
+/* Links */
 a { color: var(--color-primary); text-decoration: underline dotted; }
 a:hover, a:focus { text-decoration: underline; filter: brightness(0.98); }
 a:visited { color: var(--color-primary); opacity: 0.9; }
