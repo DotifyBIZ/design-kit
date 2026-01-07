@@ -20,7 +20,7 @@ No JavaScript. No frameworks. Just clean, predictable CSS.
 Use the canonical hosted CSS (note: the URL does not include any `/branch` segment):
 
 ```html
-<link rel="stylesheet" href="https://repo.dotify.biz/brand/design-kit/index.css">
+<link rel="stylesheet" href="https://repo.dotify.biz/design-kit/index.css">
 ```
 
 WordPress notes:
