@@ -1,0 +1,43 @@
+name: Post Release to Forge Portal
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  post-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Post GitHub release to WordPress
+        env:
+          WP_API_URL: ${{ secrets.WP_API_URL }}
+          WP_USERNAME: ${{ secrets.WP_USERNAME }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          RELEASE_TITLE: ${{ github.event.release.name || github.event.release.tag_name }}
+          RELEASE_BODY: ${{ github.event.release.body }}
+        run: |
+          AUTH=$(echo -n "$WP_USERNAME:$WP_APP_PASSWORD" | base64)
+
+          # Get existing category ID by repo name
+          CATEGORY_ID=$(curl -s \
+            -H "Authorization: Basic $AUTH" \
+            "$WP_API_URL/categories?search=$REPO_NAME" | jq '.[0].id')
+
+          if [ "$CATEGORY_ID" = "null" ]; then
+            echo "Category '$REPO_NAME' not found. Exiting."
+            exit 1
+          fi
+
+          # Create release post
+          curl -X POST \
+            -H "Authorization: Basic $AUTH" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"title\": \"$RELEASE_TITLE\",
+              \"content\": \"$RELEASE_BODY\",
+              \"status\": \"publish\",
+              \"categories\": [$CATEGORY_ID]
+            }" \
+            "$WP_API_URL/release"
