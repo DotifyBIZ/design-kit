@@ -7,8 +7,19 @@
   border: 1px solid var(--dt-grey-300);
 }
 
-.dt-card--elevated { box-shadow: 0 12px 28px rgba(16,24,40,0.08); }
-.dt-card + .dt-card { margin-top: var(--space-4); }
+.dt-card--elevated {
+  box-shadow: 0 12px 28px rgba(16,24,40,0.08);
+}
 
-.dt-card__title { font-weight: var(--font-semibold); margin-bottom: var(--space-2); }
-.dt-card__body { color: var(--color-text); }
+.dt-card + .dt-card {
+  margin-top: var(--space-4);
+}
+
+.dt-card__title {
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.dt-card__body {
+  color: var(--color-text);
+}
